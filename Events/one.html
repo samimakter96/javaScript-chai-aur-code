@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html Events</title>
+</head>
+<body>
+  <div>
+    <ul>
+      <li id="owl">Owl</li>
+      <li id="images">Photo</li>
+    </ul>
+  </div>
+
+  <script>
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+    document.getElementById('owl').addEventListener('click', function(event) {
+      console.log('clicked inside the ul')
+      
+    })
+    document.getElementById('images').addEventListener('click', function(event) {
+      console.log(event.target)
+
+      removeIt = event.target;
+      removeIt.remove()
+
+      
+    })
+
+    
+    
+  </script>
+</body>
+</html>
